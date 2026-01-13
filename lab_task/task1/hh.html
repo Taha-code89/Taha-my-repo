@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .resume {
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 6px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .contact {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .box {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        ul {
+            padding-left: 18px;
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume">
+    <h1>Mirza Taha Ali Baig/h1>
+    <div class="contact">
+        Computer Science Student | umairamin2004@gmail.com | +92-334-2424840
+    </div>
+
+    <h2>Profile</h2>
+    <p>
+        Computer Science student with an interest in AI and software development.
+        Familiar with backend development and AI-based tools.
+    </p>
+
+    <h2>Education</h2>
+    <div class="box">
+        <strong>Bachelors in Computer Science</strong><br>
+        Iqra University<br>
+        Expected 2026
+    </div>
+
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="box">
+            <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+        <div class="box">
+            <ul>
+                <li>FastAPI</li>
+                <li>OpenAI SDK</li>
+                <li>Git</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="grid">
+        <div class="box">
+            <strong>FitVision – AI Gym Assistant</strong>
+            <p>AI-based gym assistant project.</p>
+        </div>
+        <div class="box">
+            <strong>Visual AI Paint Preview</strong>
+            <p>AI tool for previewing paint colors on room images.</p>
+        </div>
+    </div>
+
+    <h2>Achievements</h2>
+    <ul>
+        <li>CGPA: 3.1/ 4.0</li>
+        <li>Enrolled in AI Program</li>
+    </ul>
+</div>
+
+</body>
+</html>

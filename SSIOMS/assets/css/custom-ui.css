@@ -1,0 +1,124 @@
+/* ===== LOGIN PAGE ===== */
+
+.login-body{
+    margin:0;
+    font-family:Segoe UI, sans-serif;
+    background:#000;
+    color:#fff;
+}
+
+.login-body .login-container{
+    display:flex;
+    height:100vh;
+}
+
+/* LEFT SIDE */
+.login-body .login-left{
+    width:55%;
+    padding:70px;
+    background:
+        radial-gradient(circle at 20% 20%, #ff000020, transparent),
+        #000;
+}
+
+.login-body .login-left .logo{
+    font-weight:700;
+    font-size:32px;
+    margin-bottom:60px;
+}
+
+.login-body .login-left h1{
+    font-size:64px;
+    line-height:1.1;
+}
+
+.login-body .login-left h1 span{
+    color:#e50914;
+}
+
+.login-body .login-left p{
+    margin-top:20px;
+    color:#aaa;
+    max-width:450px;
+}
+
+/* RIGHT SIDE */
+.login-body .login-right{
+    width:45%;
+    background:#0b0b0b;
+    display:flex;
+    align-items:center;
+    padding:60px;
+}
+
+.login-body .login-box{
+    width:100%;
+    max-width:420px;
+}
+
+.login-body .login-box h2{
+    font-size:26px;
+}
+
+.login-body .subtitle{
+    color:#888;
+    margin-bottom:30px;
+}
+
+.login-body .login-box label{
+    font-size:12px;
+    letter-spacing:1px;
+    color:#888;
+    display:block;
+    margin-bottom:6px;
+}
+
+.login-body .login-box input{
+    width:100%;
+    padding:14px;
+    background:#121212;
+    border:1px solid #222;
+    border-radius:6px;
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.login-body .login-box input:focus{
+    outline:none;
+    border-color:#e50914;
+}
+
+.login-body .login-box button{
+    width:100%;
+    padding:14px;
+    background:#e50914;
+    border:none;
+    border-radius:6px;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.login-body .login-box button:hover{
+    background:#ff1e26;
+}
+
+.login-body .error-box{
+    background:#2a0000;
+    color:#ff6b6b;
+    padding:10px;
+    border-radius:6px;
+    margin-bottom:15px;
+}
+
+.login-body .register-text{
+    margin-top:20px;
+    font-size:14px;
+    color:#aaa;
+}
+
+.login-body .register-text a{
+    color:#e50914;
+    text-decoration:none;
+}
+

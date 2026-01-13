@@ -1,0 +1,71 @@
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container {
+    margin-left: 20px;
+    padding: 30px;
+}
+
+
+.dashboard-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.dashboard-cards {
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: linear-gradient(145deg, #120000, #1f0000);
+    border: none;
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card h5 {
+    color: #bbbbbb;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.stat-card h2 {
+    font-size: 36px;
+    color: #e50914;
+    font-weight: 700;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.5);
+}
+
+
+.welcome-card {
+    background: #0f0f0f;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.welcome-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.welcome-card h2 span {
+    color: #e50914;
+}
+
+.welcome-card p {
+    color: #aaaaaa;
+    font-size: 15px;
+}

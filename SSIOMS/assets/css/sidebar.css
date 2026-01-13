@@ -1,0 +1,187 @@
+/* ===== SIDEBAR STYLES ===== */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    padding: 25px 0;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5);
+    border-right: 1px solid rgba(229, 9, 20, 0.2);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-title {
+    color: #e50914;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 20px 20px 20px;
+    margin: 0;
+    border-bottom: 1px solid rgba(229, 9, 20, 0.3);
+    text-transform: uppercase;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    padding: 14px 20px;
+    text-decoration: none;
+    margin: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sidebar-link:hover {
+    background: rgba(229, 9, 20, 0.15);
+    color: #e50914;
+    padding-left: 25px;
+}
+
+.sidebar-link.logout-btn {
+    color: #ff6b6b;
+}
+
+.sidebar-link.logout-btn:hover {
+    background: rgba(255, 107, 107, 0.15);
+    color: #ff8787;
+}
+
+.sidebar-icon {
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.sidebar-divider {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.content {
+    margin-left: 260px;
+    padding: 30px;
+    min-height: 100vh;
+    background-color: #0b0b0b;
+}
+
+.content h3 {
+    color: #e50914;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.content .btn {
+    background: #e50914;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.content .btn:hover {
+    background: #ff1e26;
+    transform: translateY(-2px);
+}
+
+.content .table {
+    background: #1a1a1a;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.15);
+}
+
+.content .table th {
+    background: linear-gradient(135deg, #e50914, #230506);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.content .table td {
+    color: #000000;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(229, 9, 20, 0.1);
+}
+
+.content .table tbody tr:hover {
+    background: rgba(229, 9, 20, 0.1);
+}
+
+.content .table a {
+    color: #e50914;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.content .table a:hover {
+    color: #ff1e26;
+    text-decoration: underline;
+}
+
+
+.ims-card {
+    background: linear-gradient(145deg, #140000, #1f0000);
+    border: none;
+    border-left: 5px solid #e50914;
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ims-card h5 {
+    color: #cccccc;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.ims-card h2 {
+    color: #e50914;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.ims-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(229, 9, 20, 0.6);
+}
+
+.ims-card.welcome-card {
+    background: #0f0f0f;
+    border-left: 5px solid #e50914;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.ims-card.welcome-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ims-card.welcome-card h2 span {
+    color: #e50914;
+}
+
+.ims-card.welcome-card p {
+    color: #aaaaaa;
+    font-size: 15px;
+}
