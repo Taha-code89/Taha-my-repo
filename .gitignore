@@ -1,0 +1,29 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.idea/
+.vscode/
+
+# Node
+node_modules/
+
+# Composer / PHP
+vendor/
+composer.lock
+.env
+.env.local
+
+# Logs and databases
+*.log
+*.sql
+
+# PHPStorm
+.phpstorm.meta.php
+
+# Windows thumbnail cache
+*thumbs.db
+
+# Ignore uploads or runtime files (adjust if you need to track uploads)
+uploads/

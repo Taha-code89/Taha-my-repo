@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #5067a7, #c56767);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        form {
+            border-radius: 12px;
+            background: #ffffff;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        input.form-control {
+            border-radius: 8px;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+
+        input.form-control:focus {
+            border-color: #42a5f5;
+            box-shadow: 0 0 0 0.2rem rgba(66, 165, 245, 0.25);
+        }
+
+        #submit {
+            border-radius: 10px;
+            font-weight: 600;
+            padding: 12px;
+            background: #552f18;
+            border: none;
+            transition: 0.3s ease;
+        }
+
+        #submit:hover {
+            background: #301412;
+        }
+
+        table {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        table th, table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        table thead {
+            background: #46100c;
+            color: #614242;
+        }
+
+        table tbody tr:nth-child(even) {
+            background: #f3f6ff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Student Records</h1>
+
+    <form id="studentForm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Student Name:</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter full name">
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email Address:</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="example@student.com">
+        </div>
+
+        <div class="mb-3">
+            <label for="course" class="form-label">Enrolled Course:</label>
+            <input type="text" id="course" name="course" class="form-control" placeholder="e.g. Web Development">
+        </div>
+    </form>
+
+    <button id="submit" class="btn w-100" onclick="addStudent()">Add Student</button>
+
+    <table id="studentTable" class="table table-bordered mt-4 bg-white shadow-sm">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script>
+    let studentCount = 0;
+
+    function addStudent() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const course = document.getElementById("course").value.trim();
+
+        if(name === "" || email === "" || course === ""){
+            alert("Please fill all fields.");
+            return;
+        }
+
+        const table = document.getElementById("studentTable").getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
+
+        studentCount++;
+        newRow.insertCell(0).innerHTML = studentCount;
+        newRow.insertCell(1).innerHTML = name;
+        newRow.insertCell(2).innerHTML = email;
+        newRow.insertCell(3).innerHTML = course;
+
+        document.getElementById("studentForm").reset();
+    }
+</script>
+
+</body>
+</html>

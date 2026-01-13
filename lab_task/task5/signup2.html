@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Threads Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .signup-card {
+      width: 360px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .signup-card h1 {
+      text-align: center;
+      color: #5b21b6; /* Threads purple */
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      border-color: #7c3aed;
+    }
+
+    .btn-signup {
+      width: 100%;
+      background-color: #5b21b6;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn-signup:hover {
+      background-color: #7c3aed;
+    }
+
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    .login-link a {
+      color: #5b21b6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="signup-card">
+  <h1>Threads</h1>
+  
+  <form onsubmit="return validateForm()">
+    <div class="form-group">
+      <input type="text" id="username" placeholder="Username">
+      <div id="usernameErr" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <input type="email" id="email" placeholder="Email">
+      <div id="emailErr" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <input type="password" id="password" placeholder="Password">
+      <div id="passwordErr" class="error"></div>
+    </div>
+
+    <button type="submit" class="btn-signup">Sign Up</button>
+  </form>
+
+  <div class="login-link">
+    Already have an account? <a href="#">Log in</a>
+  </div>
+</div>
+
+<script>
+  function validateForm() {
+    let ok = true;
+
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    document.getElementById("usernameErr").innerHTML = "";
+    document.getElementById("emailErr").innerHTML = "";
+    document.getElementById("passwordErr").innerHTML = "";
+
+    if (username === "") {
+      document.getElementById("usernameErr").innerHTML = "Username is required";
+      ok = false;
+    }
+
+    if (email === "") {
+      document.getElementById("emailErr").innerHTML = "Email is required";
+      ok = false;
+    }
+
+    if (password === "") {
+      document.getElementById("passwordErr").innerHTML = "Password is required";
+      ok = false;
+    }
+
+    return ok;
+  }
+</script>
+
+</body>
+</html>

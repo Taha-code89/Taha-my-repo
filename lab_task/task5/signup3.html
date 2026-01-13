@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Steam Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #1b2838; /* Steam dark blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #c6d4df;
+        }
+
+        .signup-card {
+            width: 380px;
+            background-color: #2a475e; /* Steam card dark */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .signup-card h1 {
+            text-align: center;
+            color: #66c0f4; /* Steam blue */
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #4b6e87;
+            background-color: #1b2838;
+            color: #c6d4df;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #66c0f4;
+            outline: none;
+        }
+
+        .btn-signup {
+            width: 100%;
+            background-color: #66c0f4;
+            color: #1b2838;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            padding: 12px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-signup:hover {
+            background-color: #4fa1d9;
+        }
+
+        .error {
+            color: #ff8080;
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+
+        .login-link a {
+            color: #66c0f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="signup-card">
+    <h1>Steam</h1>
+
+    <form onsubmit="return validateForm()">
+        <div class="form-group">
+            <input type="text" id="username" placeholder="Username">
+            <div id="usernameErr" class="error"></div>
+        </div>
+
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Email">
+            <div id="emailErr" class="error"></div>
+        </div>
+
+        <div class="form-group">
+            <input type="password" id="password" placeholder="Password">
+            <div id="passwordErr" class="error"></div>
+        </div>
+
+        <button type="submit" class="btn-signup">Sign Up</button>
+    </form>
+
+    <div class="login-link">
+        Already have an account? <a href="#">Log in</a>
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        let ok = true;
+
+        const username = document.getElementById("username").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        document.getElementById("usernameErr").innerHTML = "";
+        document.getElementById("emailErr").innerHTML = "";
+        document.getElementById("passwordErr").innerHTML = "";
+
+        if(username === "") {
+            document.getElementById("usernameErr").innerHTML = "Username is required";
+            ok = false;
+        }
+        if(email === "") {
+            document.getElementById("emailErr").innerHTML = "Email is required";
+            ok = false;
+        }
+        if(password === "") {
+            document.getElementById("passwordErr").innerHTML = "Password is required";
+            ok = false;
+        }
+
+        return ok;
+    }
+</script>
+
+</body>
+</html>
