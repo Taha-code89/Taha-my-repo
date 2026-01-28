@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: beige;
+            background-size: cover;
+        }
+        .resume-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff8f0;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+         .resume-container h1 {
+            text-align: center;
+            color: #9b2323;
+        }
+        .contact-session {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .contact-session p {
+            margin: 5px 0;
+            font-size: large;
+            color: #4b4b4b;
+        }
+        .section-2, .section-3, .section-4 {
+            margin-bottom: 30px;
+        }
+        .section-2 h2, .section-3 h2, .section-4 h2 {
+            color: #9b2323;
+            border-bottom: 2px solid #9b2323;
+            padding-bottom: 5px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            
+        }
+        .box {
+            background-color: #f0e6d2;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .box h3{
+            color: #9b2323;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <h1>My Portfolio</h1>
+        <div class="contact-session">
+        <p>Welcome to my portfolio page. Here you can find my projects and contact information.</p>
+        <p>Computer Science Student | tahabaig9114@gmail.com</p>
+        </div>
+        <div class="section-2">
+            <h2>Educational Background</h2>
+            <p><strong>Bachelor of Science in Computer Science</strong></p>
+            <p>Iqra University, 2020 - Present</p>
+            <p>Relevant Coursework: Data Structures, Algorithms, Web Development</p>
+        </div>
+        <div class="section-3">
+            <h2>Skills</h2>
+            <p>Programming Languages: Python, JavaScript, Java</p>
+            <p>Web Development: HTML, CSS, React</p>
+            <p>Databases: MySQL, MongoDB</p>
+        </div>
+        <div class="section-4">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="box">
+            <h3><strong>Project 1: Personal Website</strong></h3>
+            <p>Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my projects and skills.</p>
+            <h3><strong>Project 2: Chat Application</strong></h3    >
+            <p>Created a real-time chat application using Node.js and Socket.io for seamless communication.</p>
+            </div>
+                <div class="box">
+            <h3><strong>Project 3: E-commerce Platform</strong></h3>
+            <p>Built a full-stack e-commerce platform using React for the frontend and Django for the backend.</p>
+            <h3><strong>Project 4: Data Analysis Tool</strong></h3      >
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="c:\xampp\htdocs\bootstrap-5.3.8-dist\css\bootstrap.min.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="Form">
+        <div class="Form-heading">
+            <h1>Students Record</h1>
+        </div>
+        <form id="studentForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Students Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
+            </div>
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="text" id="email" name="email" class="form-control" placeholder="Enter your email">
+            </div>
+            
+            <div class="mb-3">
+                <label for="courses" class="form-label">Enrolled Courses</label>
+                <input type="text" id="courses" name="courses" class="form-control" placeholder="Enter your courses">
+            </div>
+        </form>
+        
+            <button class="btn btn-primary" type="submit" onclick="addstudent()">Add Student</button>
+
+        <table id="studentTable" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Student Name</th>
+                    <th>Email Address</th>
+                    <th>Enrolled Courses</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+    </div>
+    <script>
+        let studentCount = 0;
+
+        function addstudent(){
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const courses = document.getElementById("courses").value.trim();
+
+            if (name === "" || email === "" || courses === ""){
+                alert("please fill all fields.");
+                return;
+            }
+            const tabel = document.getElementById("StudentTable").getElementsByTagName("tbody")[0];
+            const newRow = tabel.insertRow(); 
+
+            studentCount++;
+            newRow.insertCell(0).innerHTML = studentCount;  
+            newRow.insertCell(1).innerHTML = name;
+            newRow.insertCell(2).innerHTML = email;         
+            newRow.insertCell(3).innerHTML = courses;
+            
+            document.getElementById("studentForm").reset();
+        }
+    </script>
+</body>
+</html>

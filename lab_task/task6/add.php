@@ -1,5 +1,5 @@
 <?php
-include "db.php";      // DB connection
+// include "db.php";      // DB connection
 include "header.php";  // Header include
 
 // Check if form submitted

@@ -1,5 +1,5 @@
 <?php
-include "db.php";
+// include "db.php";
 include "header.php";
 
 // Fetch all products from database
